@@ -28,10 +28,10 @@ This talk will explain the **Rust compiler pipeline** of
 <tr>
 
   <td>
-    <li>Web: https://runtimeverification.com</li>
-    <li>Twitter: @rv_inc</li>
-    <li>Discord: https://discord.com/invite/CurfmXNtbN</li>
-    <li>Mail: contact@runtimeverification.com</li>
+    <li><a href="https://runtimeverification.com">Website</a></li>
+    <li><a href="https://x.com/rv_inc">Twitter: @rv_inc</a></li>
+    <li><a href="https://discord.com/invite/CurfmXNtbN">Discord</a></li>
+    <li><a href="mailto:contact@runtimeverification.com">Mail</a></li>
   </td>
 
   <td>
