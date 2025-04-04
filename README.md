@@ -11,7 +11,7 @@ Readers are encouraged to verify the information on their own and seek professio
 ----
 In this video, **Daniel Cumming** a formal verification engineer at **Runtime Verification** and Rust instructor at **RareSkills** explains how the Rust compiler works under the hood.
 
-This talk will explain the Rust compiler pipeline of
+This talk will explain the **Rust compiler pipeline** of
 
 - Source code
 - Abstract Syntax Tree
@@ -24,16 +24,27 @@ This talk will explain the Rust compiler pipeline of
 - Building the Rust Compiler
 
 ----
-- RareSkills Rust Bootcamp: https://rareskills.io/rust-bootcamp
-- Runtime Verification: https://runtimeverification.com
+<table>
+<tr>
+
+  <td>
+    <li>Web: https://runtimeverification.com</li>
+    <li>Twitter: @rv_inc</li>
+    <li>Discord: https://discord.com/invite/CurfmXNtbN</li>
+    <li>Mail: contact@runtimeverification.com</li>
+  </td>
+
+  <td>
+    <li>RareSkills Rust Bootcamp: https://rareskills.io/rust-bootcamp</li>
+    <li>Runtime Verification: https://runtimeverification.com</li>
+  </td>
+
+</tr>
+</table>
 
 ----
-- Web: https://runtimeverification.com
-- Twitter: @rv_inc
-- Discord: https://discord.com/invite/CurfmXNtbN
-- Mail: contact@runtimeverification.com
 
-----
+![](images/2025-04-04-15-50-56.png)
 
 # [00:00](https://youtu.be/Ju7v6vgfEt8?t=0)  Introduction to Rust and the Rust Compiler
 
