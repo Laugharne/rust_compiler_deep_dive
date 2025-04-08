@@ -35,8 +35,8 @@ This talk will explain the **Rust compiler pipeline** of
   </td>
 
   <td>
-    <li>RareSkills Rust Bootcamp: https://rareskills.io/rust-bootcamp</li>
-    <li>Runtime Verification: https://runtimeverification.com</li>
+    <li><a href="https://rareskills.io/rust-bootcamp">RareSkills Rust Bootcamp</a></li>
+    <li><a href="https://runtimeverification.com">Runtime Verification</a></li>
   </td>
 
 </tr>
@@ -153,13 +153,13 @@ This talk will explain the **Rust compiler pipeline** of
 - [18:50](https://youtu.be/Ju7v6vgfEt8?t=1130)  After creating the AST, the compiler must expand macros and resolve names to fully understand the program structure.
 - [19:13](https://youtu.be/Ju7v6vgfEt8?t=1153)  Commands can be run in Rust C using specific flags (e.g., -Z help), allowing users to view different states within the compiler during this process. `rustc -Z unpretty="ast-free" src/main.rs`
 
-![](images/2025-03-31-16-09-21.png)
+  ![](images/2025-03-31-16-09-21.png)
 
 ## Viewing Compiler Output
 - [19:47](https://youtu.be/Ju7v6vgfEt8?t=1187)  By utilizing commands like `rustc -Z help`, users can access various compiler flags that provide insights into its operations.
 - [20:57](https://youtu.be/Ju7v6vgfEt8?t=1257)  The output of an AST does not resemble traditional graphical representations but instead appears as nodes with pointers indicating relationships between them.
 
-![](images/2025-03-31-16-07-12.png)
+  ![](images/2025-03-31-16-07-12.png)
 
 ## Practical Tools for Rust Development
 - [21:52]([How the Rust Compiler Works, a Deep Dive - YouTube](https://youtu.be/Ju7v6vgfEt8?t=1312))  The [**Rust Analyzer**](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) is highly recommended for developers; it provides extensive information about code within IDE environments, enhancing productivity.
@@ -180,7 +180,7 @@ This talk will explain the **Rust compiler pipeline** of
 - [26:38](https://youtu.be/Ju7v6vgfEt8?t=1598)  The abstract syntax tree (AST) is introduced as a tool for debugging complex programs by revealing what gets outputted by the compiler.
 - [27:00](https://youtu.be/Ju7v6vgfEt8?t=1620)  Transforming AST into **high-level intermediate representation** involves lowering and desugaring features to streamline control flow constructs like loops into singular representations.
 
-![](images/2025-03-31-16-17-30.png)
+  ![](images/2025-03-31-16-17-30.png)
 
 ## Lowering and Desugaring Process
 
@@ -194,11 +194,11 @@ This talk will explain the **Rust compiler pipeline** of
 - [28:52](https://youtu.be/Ju7v6vgfEt8?t=1732)  After **lowering**, type inference, trait solving, and type checking occur within this new representation to ensure type safety guarantees provided by the Rust compiler.
 - [29:32](https://youtu.be/Ju7v6vgfEt8?t=1772)  The transition from surface language to high-level IR shows added details like prelude inclusions and macro expansions that enhance clarity for further analysis.
 
-`rustc -Z unpretty="hir" src/main.rs`
-![](images/2025-03-31-16-25-53.png)
+  `rustc -Z unpretty="hir" src/main.rs`
+  ![](images/2025-03-31-16-25-53.png)
 
-`rustc -Z unpretty="hir-tree" src/main.rs`
-![](images/2025-03-31-16-27-18.png)
+  `rustc -Z unpretty="hir-tree" src/main.rs`
+  ![](images/2025-03-31-16-27-18.png)
 
 ## Allocation IDs in Compiler Analysis
 - [30:04](https://youtu.be/Ju7v6vgfEt8?t=1804)  In this stage of compilation, every expression receives **unique identifiers** known as `DefId` essential for tracking elements throughout various analysis rounds.
@@ -231,10 +231,10 @@ This talk will explain the **Rust compiler pipeline** of
 - [35:03](https://youtu.be/Ju7v6vgfEt8?t=2103)  After initial analysis, the representation evolves into an intermediate representation (IR), which retains more detailed information necessary for further analysis.
 - [35:48](https://youtu.be/Ju7v6vgfEt8?t=2148)  The IR is fully type checked and elaborated, allowing for deeper safety checks related to unsafe code usage within Rust programs.
 
-`rustc -Z unpretty="thir-tree" src/main.rs`
-`rustc -Z unpretty="thir-flat" src/main.rs`
+  - `rustc -Z unpretty="thir-tree" src/main.rs`
+  - `rustc -Z unpretty="thir-flat" src/main.rs`
 
-![](images/2025-04-01-14-09-07.png)
+  ![](images/2025-04-01-14-09-07.png)
 
 ## Control Flow Graph (CFG)
 
@@ -523,11 +523,12 @@ This talk will explain the **Rust compiler pipeline** of
 - [01:36:34](https://youtu.be/Ju7v6vgfEt8?t=5794) Transitioning to **building rustc**, the speaker highlights challenges faced when modifying the compiler and offers tips to ease this process.
 - They emphasize the **importance of selecting appropriate build scripts** during setup.
 
-  `./x.py setup`
+  **`./x.py setup`**
   ![](images/2025-04-03-15-33-02.png)
+
   type **b**
 
-  `time ./x build`
+  **`time ./x build`**
 
 ## Build Scripts and Configuration Options
 - [01:37:30](https://youtu.be/Ju7v6vgfEt8?t=5850) As they initiate the build process, they explain that choosing specific profiles (like 'compiler') provides configurations tailored for easier modifications while working on the Rust compiler itself. This includes options like debugging settings and incremental compilation enabled by default.
@@ -556,7 +557,7 @@ This talk will explain the **Rust compiler pipeline** of
 
 ## Performance Metrics
 - [01:46:18](https://youtu.be/Ju7v6vgfEt8?t=6378)  With incremental compilation, build times improved dramatically to 21 seconds of real time and only 1 minute and 20 seconds of user time.
-- `./x build --keep-stage 1`
+- **`./x build --keep-stage 1`**
   ```
   real    3m18.777s
   user    27m9.879s
@@ -598,11 +599,9 @@ This talk will explain the **Rust compiler pipeline** of
 - [01:55:24](https://youtu.be/Ju7v6vgfEt8?t=6924)  Guidance on reporting ICE occurrences to the compiler's GitHub issue board for resolution, stressing the importance of providing context for errors.
 
 
-
 ---
 
 # Transcription
-
 
 - [00:00:04](https://www.youtube.com/watch?v=n-ym1utpzhk?t=4) ➜ uh hello everyone my name's uh Daniel I work for runtime verification I am a formal verification engineer there and a lot of what I do is uh
 - [00:00:16](https://www.youtube.com/watch?v=n-ym1utpzhk?t=16) ➜ related to rust and the rust compiler uh and so I thought that I'd share at least a cursory overview about that with you here today um a cursory overview that's
